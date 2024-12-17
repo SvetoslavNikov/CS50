@@ -1,0 +1,12 @@
+sort1 uses: Bubble sort
+
+How do you know?: Sorting a random sequence of numbers takes far less time than sorting the already sorted numbers. Therefore, the time complexity is highly dependent on how sorted the numbers are.
+
+sort2 uses: Merge sort
+
+How do you know?: Using it on every file results in almost the same time. Thus, the initial order of the numbers does not affect the time complexity. It is the fastest of all sorting methods.
+
+sort3 uses: Selection sort
+
+How do you know?: The initial order of the numbers does not affect the time complexity. The time is not the fastest; therefore, it is selection sort.
+
