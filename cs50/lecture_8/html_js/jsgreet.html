@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+
+    <head>
+        <script>
+            function greet() {
+                let name = document.querySelector('#name_id').value;
+                alert('Hello, world?? ' + name);
+            }
+        </script>
+        <title>Greet Version 1</title>
+        </head>
+
+    <body>
+        <form onsubmit="greet(); return false;">
+            <input name="name" id="name_id" autocomplete="off" autofocus type="text">
+            <input type="submit">
+        </form>
+    </body>
+
+</html>

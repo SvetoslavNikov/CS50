@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+
+    <head>
+
+        <title>Greet Version 1</title>
+    </head>
+
+    <body>
+        <form>
+            <input name="name" id="name" autocomplete="off" autofocus type="text" placeholder="Type here pls">
+            <input type="submit">
+        </form>
+
+        <script>
+
+            function greet(event) {
+                let name = document.querySelector('#name').value;
+                alert('hello, ' + name);
+                event.preventDefault(); //like return false in jsgreet
+            }
+            let form = document.querySelector('form');
+            form.addEventListener('submit', greet)
+        </script>
+    </body>
+
+</html>

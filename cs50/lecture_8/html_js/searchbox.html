@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+
+<html lang="en">
+
+    <head>
+
+        <title>
+            Search Box with drop down suggestions - countries
+        </title>
+    </head>
+
+    <body>
+        <form>
+            <input id="search" type="text" autofocus autocomplete="off">
+        </form>
+        <ul id="suggestions"></ul>
+        <script src="countries.js"></script>
+        <script>
+            let input = document.querySelector('#search');
+            input.addEventListener('keyup', function(event) {
+                let html = '';
+                if (input.value) {
+                    for (let country of COUNTRIES) {
+                        if (country.toLowerCase().startsWith(input.value)) {
+                            html += `<li>${country}</li>`;
+                        }
+                    }
+                }
+                document.querySelector('#suggestions').innerHTML = html;
+            });
+
+        </script>
+    </body>
+
+</html>

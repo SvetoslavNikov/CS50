@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Centered Rounded Table</title>
+    <!-- Include Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <style>
+        .custom-table-container {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh; /* Full vertical height */
+            background-color: #f8f9fa; /* Light background for contrast */
+        }
+        .custom-table {
+            border-radius: 10px; /* Rounded edges */
+            overflow: hidden; /* Ensure rounded edges are clean */
+        }
+    </style>
+</head>
+<body>
+    <div class="custom-table-container">
+        <table class="table table-bordered table-striped custom-table">
+            <thead class="table-dark">
+                <tr>
+                    <th>Name</th>
+                    <th>Number</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>John</td>
+                    <td>42</td>
+                </tr>
+                <tr>
+                    <td>Jane</td>
+                    <td>35</td>
+                </tr>
+                <tr>
+                    <td>Sam</td>
+                    <td>28</td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+    <!-- Include Bootstrap JavaScript (optional for interactive components) -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>

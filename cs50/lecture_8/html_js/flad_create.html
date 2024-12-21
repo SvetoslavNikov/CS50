@@ -1,0 +1,188 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>Flag with Three Rectangles</title>
+    <style>
+        /* Centering the flag and message on the screen */
+        body {
+            margin: 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            background-color: #f0f0f0;
+        }
+
+        .flag {
+
+            margin: 30px;
+            width: 200px;
+            height: 120px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+
+
+
+        .stripe {
+            background-color: lightgrey;
+            flex: 1;
+            width: 100%;
+            border: 1px solid black;
+        }
+
+        .message {
+            text-align: center;
+            font-size: 18px;
+            font-weight: bold;
+            margin-top: 20px;
+        }
+
+        /* Styling for the buttons and container */
+        p {
+            display: flex;
+            justify-content: center;
+            gap: 10px;
+            margin: 0;
+        }
+
+        button {
+            width: 30px;
+            height: 30px;
+            border: 1px solid black;
+            font-weight: bold;
+            cursor: pointer;
+            margin-bottom: 15px;
+            margin-right: 0px;
+        }
+
+        #white1, #white2, #white3 {
+    background-color: white;
+}
+
+#green1, #green2, #green3 {
+    background-color: green;
+    color: white; /* Make text white for better contrast on green button */
+}
+
+#red1, #red2, #red3 {
+    background-color: red;
+    color: white; /* Make text white for better contrast on red button */
+}
+
+
+
+    </style>
+</head>
+
+<body>
+    <div>
+        <!-- First stripe buttons -->
+        <p id="stripe1">
+            <button id="white1">W</button>
+            <button id="green1">G</button>
+            <button id="red1">R</button>
+        </p>
+
+        <!-- Second stripe buttons -->
+        <p id="stripe2">
+            <button id="white2">W</button>
+            <button id="green2">G</button>
+            <button id="red2">R</button>
+        </p>
+
+        <!-- Third stripe buttons -->
+        <p id="stripe3">
+            <button id="white3">W</button>
+            <button id="green3">G</button>
+            <button id="red3">R</button>
+        </p>
+
+        <!-- Flag container -->
+        <div class="flag">
+            <div class="stripe stripe1"></div>
+            <div class="stripe stripe2"></div>
+            <div class="stripe stripe3"></div>
+        </div>
+
+        <!-- Message below the flag -->
+        <p id="message" class="message">Hmm, what is that flag?</p>
+    </div>
+
+    <script>
+        let stripe1_body = document.querySelector('.stripe1');
+        let stripe2_body = document.querySelector('.stripe2');
+        let stripe3_body = document.querySelector('.stripe3');
+        let messageElement = document.querySelector('#message');
+
+        // Function to update the message based on the flag colors
+        function updateMessage() {
+            // Use getComputedStyle to get the current color of the stripes
+            let stripe1Color = window.getComputedStyle(stripe1_body).backgroundColor;
+            let stripe2Color = window.getComputedStyle(stripe2_body).backgroundColor;
+            let stripe3Color = window.getComputedStyle(stripe3_body).backgroundColor;
+
+            // Check for Bulgaria flag (White, Green, Red)
+            if (stripe1Color === 'rgb(255, 255, 255)' && stripe2Color === 'rgb(0, 128, 0)' && stripe3Color === 'rgb(255, 0, 0)') {
+                messageElement.textContent = 'Oh, that is the flag of Bulgaria.';
+            }
+            // Check for Hungary flag (Red, White, Green)
+            else if (stripe1Color === 'rgb(255, 0, 0)' && stripe2Color === 'rgb(255, 255, 255)' && stripe3Color === 'rgb(0, 128, 0)') {
+                messageElement.textContent = 'Oh, that is the flag of Hungary.';
+            }
+            // Check for Iran flag (Green, White, Red)
+            else if (stripe1Color === 'rgb(0, 128, 0)' && stripe2Color === 'rgb(255, 255, 255)' && stripe3Color === 'rgb(255, 0, 0)') {
+                messageElement.textContent = 'Oh, that is the flag of Iran.';
+            }
+            // Default message if none match
+            else {
+                messageElement.textContent = 'Hmm, what is that flag?';
+            }
+        }
+
+        // Event listeners for each button to change the flag colors and update the message
+        document.querySelector('#white1').addEventListener('click', function() {
+            stripe1_body.style.backgroundColor = 'white';
+            updateMessage();
+        });
+        document.querySelector('#green1').addEventListener('click', function() {
+            stripe1_body.style.backgroundColor = 'green';
+            updateMessage();
+        });
+        document.querySelector('#red1').addEventListener('click', function() {
+            stripe1_body.style.backgroundColor = 'red';
+            updateMessage();
+        });
+
+        document.querySelector('#white2').addEventListener('click', function() {
+            stripe2_body.style.backgroundColor = 'white';
+            updateMessage();
+        });
+        document.querySelector('#green2').addEventListener('click', function() {
+            stripe2_body.style.backgroundColor = 'green';
+            updateMessage();
+        });
+        document.querySelector('#red2').addEventListener('click', function() {
+            stripe2_body.style.backgroundColor = 'red';
+            updateMessage();
+        });
+
+        document.querySelector('#white3').addEventListener('click', function() {
+            stripe3_body.style.backgroundColor = 'white';
+            updateMessage();
+        });
+        document.querySelector('#green3').addEventListener('click', function() {
+            stripe3_body.style.backgroundColor = 'green';
+            updateMessage();
+        });
+        document.querySelector('#red3').addEventListener('click', function() {
+            stripe3_body.style.backgroundColor = 'red';
+            updateMessage();
+        });
+    </script>
+
+</body>
+
+</html>

@@ -1,0 +1,12 @@
+body{
+    text-align: center;
+}
+.large_class{
+    font-size: large;
+}
+.medium_class{
+    font-size: medium;
+}
+.small_class{
+    font-size: small;
+}
