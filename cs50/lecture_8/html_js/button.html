@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Button Example</title>
+    <style>
+        #text {
+            color: black;
+            font-size: 20px;
+        }
+    </style>
+</head>
+<body>
+
+<p id="text">This is some text.</p>
+<button onclick="changeColor()">Click Me!</button>
+
+<script>
+    function changeColor() {
+        const textElement = document.getElementById("text");
+        textElement.style.color = textElement.style.color === 'red' ? 'black' : 'red';
+    }
+</script>
+
+</body>
+</html>
