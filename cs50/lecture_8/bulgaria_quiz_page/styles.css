@@ -1,0 +1,251 @@
+body {
+    background-color: #fff;
+    color: #212529;
+    font-size: 1rem;
+    font-weight: 400;
+    line-height: 1.5;
+    margin: 0;
+    text-align: left;
+}
+
+.container {
+    margin-left: auto;
+    margin-right: auto;
+    padding-left: 15px;
+    padding-right: 15px;
+}
+
+.header {
+    background-color: green;
+    color: #fff;
+    margin-bottom: 2rem;
+    padding: 2rem 1rem;
+    text-align: center;
+}
+
+.section {
+    padding: 0.5rem 2rem 1rem 2rem;
+}
+
+.section:hover {
+    background-color: #f5f5f5;
+    transition: color 2s ease-in-out, background-color 0.15s ease-in-out;
+}
+
+h1 {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 48px;
+}
+
+button,
+input[type="submit"] {
+    background-color: #d9edff;
+    border: 1px solid transparent;
+    border-radius: 0.25rem;
+    font-size: 0.95rem;
+    font-weight: 400;
+    line-height: 1.5;
+    padding: 0.375rem 0.75rem;
+    text-align: center;
+    transition: color 0.15s ease-in-out, background-color 0.15s ease-in-out, border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out;
+    vertical-align: middle;
+}
+
+
+input[type="text"] {
+    line-height: 1.8;
+    width: 25%;
+}
+
+input[type="text"]:hover {
+    background-color: #f5f5f5;
+    transition: color 2s ease-in-out, background-color 0.15s ease-in-out;
+}
+
+
+
+#bgn {
+    background-color: white;
+    color: black;
+    padding: 10px 20px;
+    font-size: 18px;
+    border: none;
+    cursor: pointer;
+    transition: background-color 0.25s ease;
+}
+
+#chf {
+    background-color: white;
+    color: black;
+    padding: 10px 20px;
+    font-size: 18px;
+    border: none;
+    cursor: pointer;
+    transition: background-color 0.25s ease;
+}
+
+#usd {
+    background-color: white;
+    color: black;
+    padding: 10px 20px;
+    font-size: 18px;
+    border: none;
+    cursor: pointer;
+    transition: background-color 0.25s ease;
+}
+
+#input-container {
+    width: 80%;
+    /* Adjust width */
+    height: 200px;
+    /* Adjust height */
+    font-size: 18px;
+    padding: 10px;
+    border: 2px solid #ccc;
+    border-radius: 5px;
+    resize: none;
+    /* Disable resizing */
+}
+
+
+#input-container {
+    position: relative;
+    width: 500px;
+}
+
+#input-container {
+    width: 500px;
+    height: 40px;
+    font-size: 18px;
+    padding: 10px;
+    border: 2px solid #ccc;
+    border-radius: 5px;
+    cursor: text;
+    /* Changes the cursor to text when the input is focused */
+}
+
+
+/* FLAG*/
+#green1,
+#green2,
+#green3 {
+    background-color: green;
+    color: white;
+    /* Make text white for better contrast on green button */
+}
+
+#red1,
+#red2,
+#red3 {
+    background-color: red;
+    color: white;
+    /* Make text white for better contrast on red button */
+}
+
+.flag {
+
+
+    width: 200px;
+    height: 120px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+
+
+.stripe {
+    background-color: lightgrey;
+    flex: 1;
+    width: 100%;
+    border: 1px solid black;
+}
+
+.message {
+
+    font-size: 18px;
+    font-weight: bold;
+    margin-top: 20px;
+}
+
+#white1,
+#green1,
+#red1,
+#white2,
+#green2,
+#red2,
+#white3,
+#green3,
+#red3 {
+
+    width: 30px;
+    height: 30px;
+    border: 1px solid black;
+    font-weight: bold;
+    cursor: pointer;
+    margin-bottom: 0px;
+    margin-right: 0px;
+}
+
+#white1,
+#white2,
+#white3 {
+    background-color: white;
+}
+
+#green1,
+#green2,
+#green3 {
+    background-color: green;
+    color: white;
+    /* Make text white for better contrast on green button */
+}
+
+#red1,
+#red2,
+#red3 {
+    background-color: red;
+    color: white;
+    /* Make text white for better contrast on red button */
+}
+
+
+/*POP UP*/
+.popup {
+    display: none; /* Hide the popup initially */
+    position: fixed; /* Position it fixed on the screen */
+    top: 50%; /* Center the popup vertically */
+    left: 50%; /* Center the popup horizontally */
+    transform: translate(-50%, -50%); /* Adjust position to be truly centered */
+    background-color: rgba(0, 0, 0, 0.9); /* Dark background with some transparency */
+    padding: 20px;
+    border-radius: 10px;
+    color: green;
+    text-align: center;
+    font-size: 1.5rem;
+    font-weight: bold;
+    width: 70%;
+    max-width: 400px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    z-index: 9999; /* Ensure it is on top of other content */
+    opacity: 0; /* Start with invisible popup */
+    transition: opacity 0.3s ease-in-out; /* Smooth transition for fading in */
+}
+
+.popup.show {
+    display: block;
+    opacity: 1; /* Make the popup visible when the class is added */
+}
+
+.close-btn {
+    position: absolute;
+    top: 5px;
+    right: 20px;
+    font-size: 35px;
+    cursor: pointer;
+    color: #555;
+}
+
+.close-btn:hover {
+    color: red;
+}

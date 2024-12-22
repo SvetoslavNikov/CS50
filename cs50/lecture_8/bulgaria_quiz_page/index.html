@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+
+<html lang="en">
+
+    <head>
+        <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@500&display=swap" rel="stylesheet">
+        <link href="styles.css" rel="stylesheet">
+        <script src="indexjs.js"></script>
+        <title>Trivia!</title>
+        <script>
+            // TODO: Add code to check answers to questions
+        </script>
+    </head>
+
+    <body>
+        <div class="header">
+            <h1>What do you know about Bulgaria, mate?</h1>
+        </div>
+
+        <div class="container">
+            <div class="section">
+                <h2>Part 1: What is the currency of Bulgaria? </h2>
+                <hr>
+                <h3>
+                    <p id="answer"></p>
+                    <p>
+                        <button id="bgn">bgn</button>
+                        <button id="chf">chf</button>
+                        <button id="usd">usd</button>
+                    </p>
+                </h3>
+            </div>
+
+            <div class="section">
+                <h2>Part 2: What is the capital of Bulgaria?</h2>
+                <hr>
+                <h3>
+                    <form>
+                        <input id="input-container" autocomplete="off" type="text" placeholder="Type your answer here">
+                        <p id="answer2"></p>
+                        <p><input id="submit" type="submit" placeholder="Submit answer"></p>
+                    </form>
+                </h3>
+
+            </div>
+
+            <div class="section">
+                <div>
+                    <h2>Part 3: Do you know the flag? </h2>
+                    <hr>
+                    <h3>
+                        <p id="stripe1">
+                            <button id="white1">W</button>
+                            <button id="green1">G</button>
+                            <button id="red1">R</button>
+                        </p>
+
+                        <p id="stripe2">
+                            <button id="white2">W</button>
+                            <button id="green2">G</button>
+                            <button id="red2">R</button>
+                        </p>
+
+                        <p id="stripe3">
+                            <button id="white3">W</button>
+                            <button id="green3">G</button>
+                            <button id="red3">R</button>
+                        </p>
+
+                        <div class="flag">
+                            <div class="stripe stripe1"></div>
+                            <div class="stripe stripe2"></div>
+                            <div class="stripe stripe3"></div>
+                        </div>
+
+                        <p id="message" class="message">Hmm, what is that flag?</p>
+
+                    </h3>
+                </div>
+
+            </div>
+        </div>
+
+        <div id="popup" class="popup">
+            <span class="close-btn">×</span>
+            <img src="russian-vodka.gif" alt="A fun GIF" />
+            <p>Congrats! You know more than engouh to go to Sunny Beach and drink to death 🍻🎉</p>
+        </div>
+
+
+    </body>
+
+</html>
